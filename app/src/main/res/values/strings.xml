@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">yup</string>
+    <string name="back">Back</string>
+    <string name="random_quantity_button">Random quantity button</string>
+</resources>
