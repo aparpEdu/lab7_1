@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.yup.ItemDataActivity;
 import com.example.yup.R;
 import com.example.yup.holder.RecyclerHolder;
-import com.example.yup.models.Fruit;
-import com.example.yup.models.Vegetable;
+import com.example.yup.model.Fruit;
+import com.example.yup.model.Vegetable;
 
 import java.util.List;
 
@@ -48,10 +48,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerHolder> {
                 Intent intent = new Intent(context, ItemDataActivity.class);
                 intent.putExtra("fruit", fruit);
                 context.startActivity(intent);
+            } else {
+                Intent intent = new Intent(context, ItemDataActivity.class);
+                intent.putExtra("vegetable", item);
+                context.startActivity(intent);
             }
-            Intent intent = new Intent(context, ItemDataActivity.class);
-            intent.putExtra("vegetable", item);
-            context.startActivity(intent);
         });
     }
 

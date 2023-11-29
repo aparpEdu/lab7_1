@@ -1,4 +1,4 @@
-package com.example.yup.models;
+package com.example.yup.model;
 
 import android.os.Parcel;
 
@@ -14,7 +14,7 @@ public class Fruit extends Vegetable{
 
     protected Fruit(Parcel in) {
         super(in);
-        this.sweetIndex = in.readInt();
+        sweetIndex = in.readInt();
     }
 
     public static final Creator<Fruit> CREATOR = new Creator<Fruit>() {

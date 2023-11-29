@@ -1,11 +1,11 @@
-package com.example.yup.models;
+package com.example.yup.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 
-public class Vegetable implements Parcelable {
+public class Vegetable implements Parcelable{
     private final String name;
     private final double price;
     private int quantity;
@@ -15,6 +15,7 @@ public class Vegetable implements Parcelable {
         this.price = price;
         this.quantity = quantity;
     }
+
 
     protected Vegetable(Parcel in) {
         name = in.readString();
@@ -44,13 +45,14 @@ public class Vegetable implements Parcelable {
     }
 
 
-    public double getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
 
     @Override
     public int describeContents() {
@@ -61,6 +63,6 @@ public class Vegetable implements Parcelable {
     public void writeToParcel(@NonNull Parcel parcel, int i) {
         parcel.writeString(name);
         parcel.writeDouble(price);
-        parcel.writeDouble(quantity);
+        parcel.writeInt(quantity);
     }
 }

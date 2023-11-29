@@ -15,7 +15,7 @@ public class RecyclerHolder extends RecyclerView.ViewHolder {
     public RecyclerHolder(@NonNull View itemView) {
         super(itemView);
         name = itemView.findViewById(R.id.recycler_name);
-        quantity = itemView.findViewById(R.id.recycler_price);
+        quantity = itemView.findViewById(R.id.recycler_quantity);
     }
 
 
@@ -23,7 +23,7 @@ public class RecyclerHolder extends RecyclerView.ViewHolder {
         this.name.setText(name);
     }
 
-    public void setQuantity(double quantity) {
+    public void setQuantity(int quantity) {
         this.quantity.setText(String.valueOf(quantity));
     }
 }

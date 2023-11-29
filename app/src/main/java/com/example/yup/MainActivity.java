@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.yup.adapter.RecyclerAdapter;
 import com.example.yup.generator.Generator;
-import com.example.yup.models.Vegetable;
+import com.example.yup.model.Vegetable;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         for(Vegetable v: items) {
-            v.setQuantity(Math.round(new Random().nextInt()));
+            v.setQuantity(new Random().nextInt(100));
         }
         adapter.notifyDataSetChanged();
     }

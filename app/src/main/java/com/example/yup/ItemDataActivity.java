@@ -3,10 +3,11 @@ package com.example.yup;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
-import com.example.yup.models.Fruit;
-import com.example.yup.models.Vegetable;
+import com.example.yup.model.Fruit;
+import com.example.yup.model.Vegetable;
 
 public class ItemDataActivity extends AppCompatActivity {
 
@@ -25,6 +26,7 @@ public class ItemDataActivity extends AppCompatActivity {
                 quantity.setText(String.valueOf(vegetable.getQuantity()));
                 name.setText(vegetable.getName());
                 price.setText(String.valueOf(vegetable.getPrice()));
+                index.setVisibility(View.INVISIBLE);
             } else {
                 Fruit fruit = getIntent().getParcelableExtra("fruit");
                 if (fruit != null) {
